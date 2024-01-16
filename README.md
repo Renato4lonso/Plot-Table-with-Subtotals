@@ -1,30 +1,43 @@
 # Create Plotly Table with title and subtotals row
 
-This project is amazing and does awesome things. Welcome!
+This project is created to enable Python users to easily generate personalized tables with custom subtotals
 
 ## Table of Contents
 1. [Description](#description)
 2. [Requirements](#requirements)
 3. [Installation](#installation)
 4. [Usage](#usage)
-5. [Class_Definition](#Class_Definition)
+5. [Class_definition](#class_definition)
 6. [Examples](#examples)
 
 ## Description
 
-Detailed explanation of what this project does and why it's great.
+The project is designed for creating tables with specified styling using Plotly. It includes methods to generate individual components such as title, data, and subtotals tables, and a comprehensive method create_table_with_title that combines these components into a vertically stacked table with customizable title, colors, and data. The class allows for easy integration of tables into Plotly figures with specified heights and styling details.
 
 ## Requirements
 
-List of requirements needed to run the project.
+Install the Plotly module in Python to seamlessly utilize the features of this project for creating customized tables.
 
 ## Installation
 
-Step-by-step guide on how to install and set up the project.
+This code is compatible with both Python and Jupyter environments. To get started, include the Plotly_Table class provided below in your script. 
+```python
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
 
+class Plotly_Table:
+    def __init__(self):
+# ... (rest of the class code)
+```
 ## Usage
 
-Instructions on how to use this project.
+First Instantiate the class by creating an instance:
+
+```python
+plotly_table = Plotly_Table()  # Define the instance
+# ... (rest of the code)
+```
+To utilize this functionality, prepare two dataframes. The first dataframe should contain your data, while the second one should consist of the corresponding subtotals. Ensure both dataframes have identical columns. With a separate dataframe for subtotals, you have the flexibility to calculate subtotal values using any desired methodology.
 
 ## Class_Definition
 
