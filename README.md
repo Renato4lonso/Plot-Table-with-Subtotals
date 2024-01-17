@@ -153,13 +153,13 @@ import pandas as pd
 import random
 import numpy as np
 
-n_clientes = 18
-data_cuentas = {
+n_clients = 18
+data_accounts = {
     'Client': [f'Client_{i}' for i in range(1, n_clientes + 1)],
-    'Market Value': [round(random.uniform(10000, 50000), 2) for _ in range(n_clientes)],
-    '% in Stocks and Options': [round(random.uniform(0, 100), 2) for _ in range(n_clientes)],
+    'Market Value': [round(random.uniform(10000, 50000), 2) for _ in range(n_clients)],
+    '% in Stocks and Options': [round(random.uniform(0, 100), 2) for _ in range(n_clients)],
 }
-df = pd.DataFrame(data_cuentas)
+df = pd.DataFrame(data_accounts)
 df.insert(3, '% in Cash', (100 -df['% in Stocks and Options']).round(2))
 
 # # Generating df with subtotals (Personalized)
